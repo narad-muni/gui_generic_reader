@@ -18,8 +18,8 @@ fn open(
     config_path: String,
     file_path: String,
     _type: Type,
-    from: Option<usize>,
-    len: Option<usize>,
+    from: Option<u64>,
+    len: Option<u64>,
 ) -> Result<Vec<Map<String, Value>>, String> {
     let reader = Reader::new(config_path, file_path, _type).map_err(|e| e.to_string())?;
 
